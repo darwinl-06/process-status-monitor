@@ -2,6 +2,12 @@
 
 This project consists of the development of two tools (one in PowerShell and one in Bash) designed to assist data center administrators who manage both Windows and Linux machines. These tools help in monitoring and managing the processes running on the servers. The tools are as follows:
 
+## Team members
+
+- Dylan Bermúdez Cardona
+- Darwin Lenis Maturana
+- Juan Felipe Madrid
+
 ## Tools Overview
 
 ### 1. Windows Server Process Monitoring Tool
@@ -9,7 +15,7 @@ This project consists of the development of two tools (one in PowerShell and one
 This tool is a PowerShell script that monitors the processes running on a Windows server. It provides a web interface with the following features:
 
 - Display an HTML table of the current processes running on the machine.
-- Allow users to terminate a process by selecting it from a list (instead of entering the process ID manually). The process is terminated with a simple button click for ease of use.
+- Allow users to terminate a process by selecting it from a list. The process is terminated with a simple button click for ease of use.
 
 ### 2. Linux Server Process Monitoring Tool
 
