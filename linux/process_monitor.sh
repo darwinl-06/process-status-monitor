@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Configuración del puerto del servidor web
 PORT=8080
 
-# Crear la página HTML inicial
 cat <<'HTML' > process_monitor.html
 <!DOCTYPE html>
 <html lang="es">
@@ -70,7 +68,6 @@ cat <<'HTML' > process_monitor.html
 </html>
 HTML
 
-# Función para manejar solicitudes HTTP directamente en Python
 python3 - <<'END_PYTHON'
 import http.server
 import socketserver

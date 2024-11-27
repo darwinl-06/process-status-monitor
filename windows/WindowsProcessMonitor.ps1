@@ -1,9 +1,5 @@
-﻿# Guardar como ProcessMonitor.ps1
+﻿$port = 8080
 
-# Configuración del puerto del servidor web
-$port = 8080
-
-# Función para generar la tabla HTML de procesos
 function Get-ProcessHtmlTable {
     $processes = Get-Process | Select-Object Id, ProcessName, CPU, WorkingSet, StartTime
     $html = "<div class='table-responsive'><table class='process-table'>"
@@ -22,7 +18,6 @@ function Get-ProcessHtmlTable {
     return $html
 }
 
-# Función para generar la página HTML principal
 function Get-PageContent {
     return @"
 <!DOCTYPE html>
@@ -147,7 +142,6 @@ function Get-PageContent {
 "@
 }
 
-# Función para manejar las solicitudes HTTP
 function Handle-Request {
     param ($context)
     
