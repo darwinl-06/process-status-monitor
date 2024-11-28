@@ -1,4 +1,27 @@
-﻿$port = 8080
+﻿<#
+.SYNOPSIS
+Monitor de Procesos de Windows con una interfaz web.
+
+.DESCRIPTION
+Este script crea un servidor HTTP en el puerto especificado (por defecto, 8080). 
+Permite a los usuarios monitorear los procesos en ejecución en un sistema Windows 
+y finalizar procesos específicos a través de una interfaz web accesible desde el navegador.
+
+.FUNCTIONALITY
+- Muestra una tabla con los procesos en ejecución, incluyendo PID, nombre, uso de CPU, 
+  memoria utilizada y tiempo de inicio.
+- Permite finalizar procesos específicos mediante un botón "Terminar".
+
+.NOTES
+Este script está diseñado para sistemas Windows y requiere privilegios administrativos 
+para detener procesos protegidos.
+
+.EXAMPLE
+.\MonitorProcesos.ps1
+Inicia el servidor en el puerto 8080 y muestra la interfaz web en `http://localhost:8080`.
+#>
+
+$port = 8080
 
 function Get-ProcessHtmlTable {
     $processes = Get-Process | Select-Object Id, ProcessName, CPU, WorkingSet, StartTime
